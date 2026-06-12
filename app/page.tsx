@@ -426,7 +426,11 @@ export default function Home() {
   const nextMatch = selectedTeamId ? getNextMatchForTeam(selectedTeamId, now) : null;
 
   const handleTeamClick = useCallback((id: string) => {
-    setSelectedTeamId(prev => prev === id ? null : id);
+    setSelectedTeamId(prev => {
+      const next = prev === id ? null : id;
+      if (next) window.scrollTo({ top: 0, behavior: 'smooth' });
+      return next;
+    });
     setActiveTab('match');
   }, []);
 
