@@ -39,7 +39,7 @@ export const matches: Match[] = [
   { id: 'A1', group: 'A', matchday: 1,
     homeTeamId: 'mex', awayTeamId: 'rsa',
     kickoffUTC: '2026-06-11T19:00:00Z',   // Thu 11 Jun, 3 PM ET → 22:00 KSA
-    venue: 'Estadio Azteca', city: 'Mexico City' },
+    venue: 'Estadio Banorte', city: 'Mexico City' },
 
   { id: 'A2', group: 'A', matchday: 1,
     homeTeamId: 'kor', awayTeamId: 'cze',
@@ -61,7 +61,7 @@ export const matches: Match[] = [
   { id: 'A5', group: 'A', matchday: 3,
     homeTeamId: 'cze', awayTeamId: 'mex',
     kickoffUTC: '2026-06-25T01:00:00Z',   // Wed 24 Jun, 9 PM ET → 04:00 KSA Thu
-    venue: 'Estadio Azteca', city: 'Mexico City' },
+    venue: 'Estadio Banorte', city: 'Mexico City' },
 
   { id: 'A6', group: 'A', matchday: 3,
     homeTeamId: 'rsa', awayTeamId: 'kor',
@@ -162,7 +162,7 @@ export const matches: Match[] = [
 
   { id: 'D4', group: 'D', matchday: 2,
     homeTeamId: 'tur', awayTeamId: 'par',
-    kickoffUTC: '2026-06-20T04:00:00Z',   // Sat 20 Jun, 12 AM ET → 07:00 KSA
+    kickoffUTC: '2026-06-20T03:00:00Z',   // Fri 19 Jun, 11 PM ET → 06:00 KSA Sat
     venue: "Levi's Stadium", city: 'Santa Clara' },
 
   // MD3 (simultaneous)
@@ -404,7 +404,7 @@ export const matches: Match[] = [
   { id: 'K2', group: 'K', matchday: 1,
     homeTeamId: 'uzb', awayTeamId: 'col',
     kickoffUTC: '2026-06-18T02:00:00Z',   // Wed 17 Jun, 10 PM ET → 05:00 KSA Thu
-    venue: 'Estadio Azteca', city: 'Mexico City' },
+    venue: 'Estadio Banorte', city: 'Mexico City' },
 
   // MD2
   { id: 'K3', group: 'K', matchday: 2,
