@@ -1,5 +1,14 @@
 const KSA_TZ = 'Asia/Riyadh';
 
+export function formatKSADateShort(utcString: string): string {
+  return new Date(utcString).toLocaleDateString('en-SA', {
+    timeZone: KSA_TZ,
+    weekday: 'short',
+    month: 'short',
+    day: 'numeric',
+  });
+}
+
 export function formatKSADate(utcString: string): string {
   return new Date(utcString).toLocaleDateString('en-SA', {
     timeZone: KSA_TZ,

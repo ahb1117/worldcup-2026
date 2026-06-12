@@ -6,7 +6,7 @@ import { teams, flagUrl } from '@/data/teams';
 import { matches, getNextMatchForTeam, getMatchesForTeam, getMatchStatus } from '@/data/schedule';
 import type { Match } from '@/data/schedule';
 import type { Team } from '@/data/teams';
-import { formatKSADate, formatKSATime, getCurrentKSATime, getCountdown, pad } from '@/lib/utils';
+import { formatKSADate, formatKSADateShort, formatKSATime, getCurrentKSATime, getCountdown, pad } from '@/lib/utils';
 
 /* ─────────────── Reusable flag image ─────────────── */
 function FlagImg({
@@ -168,7 +168,7 @@ function AllMatchesList({ teamId, now }: { teamId: string; now: Date }) {
               ) : (
                 <span className="font-bold text-np-primary text-xs whitespace-nowrap font-mono">{formatKSATime(m.kickoffUTC)}</span>
               )}
-              <span className="text-[9px] text-np-fg-4 whitespace-nowrap">{formatKSADate(m.kickoffUTC).slice(0, 15)}</span>
+              <span className="text-[9px] text-np-fg-4 whitespace-nowrap">{formatKSADateShort(m.kickoffUTC)}</span>
               {status === 'live' && (
                 <span className="np-badge-live text-[9px] font-bold px-2 py-0.5 rounded-full text-white mt-0.5">LIVE</span>
               )}
