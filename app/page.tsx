@@ -420,12 +420,15 @@ export default function Home() {
 
   const groups = ['ALL', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'];
 
-  const filteredTeams = useMemo(() => teams.filter(t => {
-    const matchesSearch = !search ||
-      t.name.toLowerCase().includes(search.toLowerCase()) ||
-      t.code.toLowerCase().includes(search.toLowerCase());
-    return matchesSearch && (filterGroup === 'ALL' || t.group === filterGroup);
-  }), [search, filterGroup]);
+  const filteredTeams = useMemo(() => teams
+    .filter(t => {
+      const matchesSearch = !search ||
+        t.name.toLowerCase().includes(search.toLowerCase()) ||
+        t.code.toLowerCase().includes(search.toLowerCase());
+      return matchesSearch && (filterGroup === 'ALL' || t.group === filterGroup);
+    })
+    .sort((a, b) => a.name.localeCompare(b.name)),
+  [search, filterGroup]);
 
   const [liveStandings, setLiveStandings] = useState<Record<string, StandingRow[]> | null>(null);
 
